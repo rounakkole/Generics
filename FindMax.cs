@@ -8,20 +8,12 @@ namespace Generics
 {
     internal class FindMax<T>
     {
-        public T MaxValue(T Value1, T Value2, T Value3)
+        public T MaxValue(T[] ArrayValue)
         {
-            if (Comparer<T>.Default.Compare(Value1,Value2)> 0 && Comparer<T>.Default.Compare(Value1, Value2) > 0)
-            { 
-                return Value1; 
-            }
-            else if (Comparer<T>.Default.Compare(Value2, Value1) > 0 && Comparer<T>.Default.Compare(Value2, Value3) > 0)
-            {
-                return Value2;
-            }
-            else
-            {
-                return Value3;
-            }
+            Array.Sort(ArrayValue);
+            Array.Reverse(ArrayValue);
+
+            return ArrayValue[0];
         }
 
 
