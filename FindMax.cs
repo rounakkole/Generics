@@ -8,14 +8,22 @@ namespace Generics
 {
     internal class FindMax<T>
     {
-        public T MaxValue(T[] ArrayValue)
+        T Max;
+
+        public void MaxValue(T[] ArrayValue)
         {
             Array.Sort(ArrayValue);
             Array.Reverse(ArrayValue);
 
-            return ArrayValue[0];
+             Max = ArrayValue[0];
         }
 
+
+        public void toPrint()
+        {
+            Console.WriteLine($"maximum value: {Max}");
+            
+        }
 
     }
 }
