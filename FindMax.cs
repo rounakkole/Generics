@@ -8,7 +8,7 @@ namespace Generics
 {
     internal class FindMax
     {
-        public float MaxFloat(float Value1, float Value2, float Value3)
+        public string MaxString(string Value1, string Value2, string Value3)
         {
             if (Value1.CompareTo(Value2) > 0 && Value1.CompareTo(Value3) > 0)
             { 
