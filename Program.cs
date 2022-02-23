@@ -9,10 +9,14 @@ namespace Generics
         static void Main(string[] args)
         {
             Console.WriteLine(".NET Generics");
-            FindMax findMax = new FindMax();
-            Console.WriteLine(findMax.MaxValue<int>(40,20,10)); 
-            Console.WriteLine(findMax.MaxValue<float>(30.6F, 40.2F, 10.7F));  
-            Console.WriteLine(findMax.MaxValue<string>("e","h","u"));  
+            FindMax<int> findInt = new FindMax<int>();
+            Console.WriteLine(findInt.MaxValue(40,20,10));
+
+            FindMax<float> findFloat = new FindMax<float>();
+            Console.WriteLine(findFloat.MaxValue(30.6F, 40.2F, 10.7F));
+
+            FindMax<string> findString = new FindMax<string>();
+            Console.WriteLine(findString.MaxValue("e","h","u"));  
 
         }
     }
