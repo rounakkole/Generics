@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System;
+using System.Collections.Generic;
 
 namespace Generics
 {
@@ -9,9 +10,9 @@ namespace Generics
         {
             Console.WriteLine(".NET Generics");
             FindMax findMax = new FindMax();
-            Console.WriteLine(findMax.MaxString("y","t","s")); //TC 1.1
-            Console.WriteLine(findMax.MaxString("g","r","f"));  //TC 1.1
-            Console.WriteLine(findMax.MaxString("e","h","u"));  //TC 1.1
+            Console.WriteLine(findMax.MaxValue<int>(40,20,10)); 
+            Console.WriteLine(findMax.MaxValue<float>(30.6F, 40.2F, 10.7F));  
+            Console.WriteLine(findMax.MaxValue<string>("e","h","u"));  
 
         }
     }

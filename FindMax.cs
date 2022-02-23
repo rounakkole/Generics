@@ -8,13 +8,13 @@ namespace Generics
 {
     internal class FindMax
     {
-        public string MaxString(string Value1, string Value2, string Value3)
+        public T MaxValue<T>(T Value1, T Value2, T Value3)
         {
-            if (Value1.CompareTo(Value2) > 0 && Value1.CompareTo(Value3) > 0)
+            if (Comparer<T>.Default.Compare(Value1,Value2)> 0 && Comparer<T>.Default.Compare(Value1, Value2) > 0)
             { 
                 return Value1; 
             }
-            else if (Value2.CompareTo(Value1) > 0 && Value2.CompareTo(Value3) > 0)
+            else if (Comparer<T>.Default.Compare(Value2, Value1) > 0 && Comparer<T>.Default.Compare(Value2, Value3) > 0)
             {
                 return Value2;
             }
